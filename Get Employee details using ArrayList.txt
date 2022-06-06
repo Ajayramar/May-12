@@ -1,0 +1,54 @@
+package com.company;
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) throws ArithmeticException {
+        Employee employee1=new Employee("4324131","Ajay",22,'M',7434642327l);
+        Employee employee2=new Employee("1233221","karan",32,'M',447245872l);
+        Employee employee3=new Employee("3454221","jay",34,'M',56742387732l);
+        Employee employee4=new Employee("8723478","jhon",45,'M',7767824782l);
+        Employee employee5=new Employee("8944833","michal",27,'M',451234322l);
+        Employee employee6=new Employee("4454332","stephan",42,'M',664242327l);
+        ArrayList<Employee> list=new ArrayList<Employee>();
+        list.add(employee1);
+        list.add(employee2);
+        list.add(employee3);
+        list.add(employee4);
+        list.add(employee5);
+        list.add(employee6);
+        Scanner input=new Scanner(System.in);
+        System.out.print("enter the employee ID :");
+        String id=input.next();
+        for(Employee i:list){
+            if(i.ID.equals(id)){
+                System.out.println("name of the employee :"+i.name);
+                System.out.println("age of the employee :"+i.age);
+                System.out.println("gender of the employee :"+i.gender);
+                System.out.println("mobileNo of the employee :"+i.mobileNo);
+            }
+        }
+    }
+}
+
+public class Employee {
+    String ID;
+    String name;
+    int age;
+    char gender;
+    long mobileNo;
+    Employee(String ID,String name,int age,char gender,long mobileNo){
+        this.ID=ID;
+        this.name=name;
+        this.age=age;
+        this.gender=gender;
+        this.mobileNo=mobileNo;
+    }
+}
+
+OUTPUT:
+enter the employee ID :4454332
+name of the employee :stephan
+age of the employee :42
+gender of the employee :M
+mobileNo of the employee :664242327
